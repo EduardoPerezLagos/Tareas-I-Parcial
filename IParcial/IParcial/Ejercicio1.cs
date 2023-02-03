@@ -22,11 +22,9 @@ namespace IParcial
         private void MostrarButton_Click(object sender, EventArgs e)
         {
             int numero = int.Parse(NumeroTextBox.Text);
-
-            
-
-            resultadofinal = Negativo(numero);
             resultadofinal = Positivo(numero);
+            resultadofinal = Negativo(numero);
+            
         }
 
         private int Positivo(int numero)
@@ -50,7 +48,7 @@ namespace IParcial
             {
                 ResultadoLabel.Text = "El numero " + numero + " es PAR y NEGATIVO";
             }
-            else
+            else if(numero<0)
             {
                 ResultadoLabel.Text = "El numero " + numero + " es IMPAR y NEGATIVO";
             }
